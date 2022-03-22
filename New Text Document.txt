@@ -1,0 +1,14 @@
+first run mysql image
+
+dokcer pull mysql:8.0
+kubectl apply -f mysql-pv.yml
+kubectl apply -f mysql-pvc.yml
+kubectl apply -f mysql-deployment.yml
+kubectl apply -f mysql-service.yml
+
+
+
+run mvn clean package in ide
+docker build -t spring-boot-mysql-example:1.0 .
+kubectl apply -f deployment.yml
+kubectl apply -f service.yml
