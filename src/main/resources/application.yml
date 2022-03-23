@@ -9,9 +9,9 @@ spring:
 
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://mysql/homedb?autoReconnect=true&useSSL=false
-        username: root
-        password: root123
+        url: jdbc:mysql://${DB_HOST}/${DB_NAME}?autoReconnect=true&useSSL=false
+        username: ${DB_USERNAME}
+        password: ${DB_PASSWORD}
         hikari:
             connection-timeout: 60000
             maximum-pool-size: 5
